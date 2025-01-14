@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>외주소녀 | APT GAME</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./img/favicon.png" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Gugi&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- for production -->
+    <script src="./config.js"></script>
+
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+  </head>
+  <body>
+    <div id="ready-game">
+      <h2>몇 층에서 멈출까?</h2>
+      <div id="random-number"></div>
+      <button id="start-btn">START</button>
+    </div>
+
+    <div id="rank-board">
+      <h3>🏆RANKING</h3>
+      <div id="rank-list"></div>
+    </div>
+
+    <div id="score-box">
+      🎯SCORE<br />
+      <span id="score">0</span>
+    </div>
+
+    <div id="typography">
+      <span class="author">KEYBOARDYst</span>
+      <span class="title">APT.</span>
+    </div>
+
+    <div id="countdown" style="display: none" data-count="3"></div>
+
+    <div id="controls">
+      <button id="left-btn" style="display: none">왼손</button>
+      <button id="right-btn" style="display: none">오른손</button>
+      <button id="game-btn" style="display: none">GAME START</button>
+    </div>
+
+    <div id="result-floor"></div>
+
+    <div id="hands"></div>
+
+    <div id="game-over">
+      <h2 class="game-over-title">YOU LOSE😭</h2>
+      <p><span id="game-over-score">0</span>점</p>
+      <div class="record">
+        <p>
+          대단해요!🎉 랭킹에 이름을 올리려면 닉네임을 입력하고 등록 버튼을
+          눌러주세요.
+        </p>
+        <input type="text" id="game-over-nickname" />
+        <button id="game-over-register">등록</button>
+      </div>
+      <button id="replay">REPLAY</button>
+    </div>
+
+    <!-- js -->
+    <!-- for development -->
+    <script src="./script.js"></script>
+  </body>
+</html>
