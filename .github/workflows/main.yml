@@ -11,7 +11,6 @@ permissions:
 jobs:
   inject-config:
     runs-on: ubuntu-latest
-    environment: github-pages
     steps:
       - name: 코드 체크아웃
         uses: actions/checkout@v2
